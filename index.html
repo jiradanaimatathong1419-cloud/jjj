@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>หน้าแลกรหัส</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+        .box{
+            background:#fff;
+            padding:30px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 10px 20px rgba(0,0,0,0.2);
+        }
+        input{
+            padding:10px;
+            width:200px;
+            border-radius:8px;
+            border:1px solid #ccc;
+            margin-top:10px;
+        }
+        button{
+            margin-top:15px;
+            padding:10px 20px;
+            border:none;
+            border-radius:8px;
+            background:#ff6f91;
+            color:#fff;
+            font-size:16px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>กรอกรหัสเพื่อเข้าสู่เว็บ 💖</h2>
+    <input type="password" id="password" placeholder="ใส่รหัส">
+    <br>
+    <button onclick="checkPassword()">ยืนยัน</button>
+</div>
+
+<script>
+    // 🔑 เปลี่ยนรหัสตรงนี้ได้ตลอด
+    const correctPassword = "1234";
+
+    function checkPassword(){
+        const input = document.getElementById("password").value;
+        if(input === correctPassword){
+            window.location.href = "gallery.html";
+        }else{
+            alert("รหัสไม่ถูกต้อง 😢");
+        }
+    }
+</script>
+
+</body>
+</html>
